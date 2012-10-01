@@ -99,7 +99,9 @@
         "username": "root",
         "database": "photopoll",
         "host": "localhost",
-        "password": "XXXXXXXXXXX"
+        "password": "XXXXXXXXXXX",
+        "pool": 5,
+        "encoding": 'utf8'
       },
       "mounted_at": null,
       "rails_env": "production",

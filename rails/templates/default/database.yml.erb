@@ -2,10 +2,11 @@
 <%= env %>:
   adapter: <%= @database[:adapter] %>
   database: <%= @database[:database] %>
-  encoding: utf8
+  encoding: <%= @database[:encoding] || 'utf8' %>
   host: <%= @database[:host] || 'localhost' %>
   username: <%= @database[:username] %>
   password: <%= @database[:password] %>
   reconnect: <%= @database[:reconnect] ? 'true' : 'false' %>
+  pool: <%= @database[:pool] || 5 %>
 
 <% end -%>
