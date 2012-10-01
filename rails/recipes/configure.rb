@@ -1,6 +1,12 @@
 include_recipe "deploy"
 
 node[:deploy].each do |application, deploy|
+
+  if deploy[:application_type] != 'rails'
+    Chef::Log.info("Skipping rails::configure for '#{application}' application, as it's not an Rails app")
+    next
+  end
+
   execute "restart Rails app #{application}" do
     cwd deploy[:current_path]
     command node[:scalarium][:rails_stack][:restart_command]
