@@ -101,7 +101,7 @@
         "host": "localhost",
         "password": "XXXXXXXXXXX",
         "pool": 5,
-        "encoding": 'utf8'
+        "encoding": "utf8"
       },
       "mounted_at": null,
       "rails_env": "production",
